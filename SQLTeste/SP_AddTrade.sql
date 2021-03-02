@@ -1,15 +1,15 @@
 -- =============================================
--- Author:		Fábio Arruda
+-- Author:		Fï¿½bio Arruda
 -- Create date: 01/03/2021
--- Description:	Procedure fará adição de novas trades na tabela, verificando as informações para vincular a Categoria correta.
+-- Description:	Procedure farï¿½ adiï¿½ï¿½o de novas trades na tabela, verificando as informaï¿½ï¿½es para vincular a Categoria correta.
 -- Input Format: '2000000;Private|400000;Public|500000;Public|3000000;Public'
--- Output: Retorna a informação das categorias inseridas nas trades que chamaram a proc e inserem na tabela trade.
+-- Output: Retorna a informaï¿½ï¿½o das categorias inseridas nas trades que chamaram a proc e inserem na tabela trade.
 -- =============================================
-IF OBJECT_ID('AddTrade') IS NOT NULL
-	DROP PROCEDURE AddTrade
+IF OBJECT_ID('SP_AddTrade') IS NOT NULL
+	DROP PROCEDURE SP_AddTrade
 GO
 
-CREATE PROCEDURE AddTrade
+CREATE PROCEDURE SP_AddTrade
 	@Entrada VARCHAR(MAX)
 	,@Portfolio VARCHAR(MAX) OUTPUT
 AS
@@ -70,7 +70,7 @@ BEGIN
 		BEGIN
 			IF @ClientSectorNome = 'Public'
 			BEGIN
-				PRINT cast(@Valor AS VARCHAR(50)) + ' MAIOR QUE 1 MILHAO E O ClientSector É ' + cast(@ClientSectorNome AS VARCHAR(50))
+				PRINT cast(@Valor AS VARCHAR(50)) + ' MAIOR QUE 1 MILHAO E O ClientSector ï¿½ ' + cast(@ClientSectorNome AS VARCHAR(50))
 				SET @CategoriaId = (SELECT Id FROM Categoria WHERE UPPER(NomeCategoria) = UPPER('MediumRisk'))
 				SET @ClientSectorId = (SELECT Id FROM SetorCliente WHERE UPPER(NomeSetorCliente) = UPPER('Public'))
 				PRINT '@CategoriaId =' + cast(@CategoriaId AS VARCHAR(50))
@@ -78,7 +78,7 @@ BEGIN
 			END
 			ELSE
 			BEGIN
-				PRINT cast(@Valor AS VARCHAR(50)) + ' MAIOR QUE 1 MILHAO E O ClientSector É ' + cast(@ClientSectorNome AS VARCHAR(50))
+				PRINT cast(@Valor AS VARCHAR(50)) + ' MAIOR QUE 1 MILHAO E O ClientSector ï¿½ ' + cast(@ClientSectorNome AS VARCHAR(50))
 				SET @CategoriaId = (SELECT Id FROM Categoria WHERE UPPER(NomeCategoria) = UPPER('HighRisk'))
 				SET @ClientSectorId = (SELECT Id FROM SetorCliente WHERE UPPER(NomeSetorCliente) = UPPER('Private'))
 				PRINT '@CategoriaId =' + cast(@CategoriaId AS VARCHAR(50))
