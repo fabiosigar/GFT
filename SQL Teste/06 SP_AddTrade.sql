@@ -2,9 +2,14 @@
 -- Author:		Fábio Arruda
 -- Create date: 01/03/2021
 -- Description:	Procedure fará adição de novas trades na tabela, verificando as informações para vincular a Categoria correta.
--- Input Format: '2000000;Private|400000;Public|500000;Public|3000000;Public'
+-- Input Format: 'Trade1 {Value = 2000000; ClientSector = "Private"} 
+--					Trade2 {Value = 400000; ClientSector = "Public"} 
+--					Trade3 {Value = 500000; ClientSector = "Public"} 
+--					Trade4 {Value = 3000000; ClientSector = "Public"}'
 -- Output: Retorna a informação das categorias inseridas nas trades que chamaram a proc e inserem na tabela trade.
 -- =============================================
+USE GFT
+GO
 IF OBJECT_ID('SP_AddTrade') IS NOT NULL
 	DROP PROCEDURE SP_AddTrade
 GO
