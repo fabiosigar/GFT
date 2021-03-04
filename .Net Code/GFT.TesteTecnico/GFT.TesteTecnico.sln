@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GFT.TesteTecnicoAPI", "GFT.TesteTecnicoCode\GFT.TesteTecnicoAPI.csproj", "{E0CE8782-1306-4C47-BD0B-893E1DEB68F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GFT.TestTecnicoEntrada", "GFT.TestTecnicoEntrada\GFT.TestTecnicoEntrada.csproj", "{2F26983D-9F1D-4D3C-BD40-E8FA868AF0D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0CE8782-1306-4C47-BD0B-893E1DEB68F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CE8782-1306-4C47-BD0B-893E1DEB68F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CE8782-1306-4C47-BD0B-893E1DEB68F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CE8782-1306-4C47-BD0B-893E1DEB68F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F26983D-9F1D-4D3C-BD40-E8FA868AF0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F26983D-9F1D-4D3C-BD40-E8FA868AF0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F26983D-9F1D-4D3C-BD40-E8FA868AF0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F26983D-9F1D-4D3C-BD40-E8FA868AF0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F970BF1-DBF8-4928-B6E8-9739ACD774C0}
+	EndGlobalSection
+EndGlobal

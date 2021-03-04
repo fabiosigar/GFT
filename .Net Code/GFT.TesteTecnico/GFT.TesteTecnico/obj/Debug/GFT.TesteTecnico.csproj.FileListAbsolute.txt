@@ -1,0 +1,7 @@
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\obj\Debug\GFT.TesteTecnico.csprojAssemblyReference.cache
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\obj\Debug\GFT.TesteTecnico.csproj.CoreCompileInputs.cache
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\bin\Debug\GFT.TesteTecnico.exe.config
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\bin\Debug\GFT.TesteTecnico.exe
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\bin\Debug\GFT.TesteTecnico.pdb
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\obj\Debug\GFT.TesteTecnico.exe
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TesteTecnico\obj\Debug\GFT.TesteTecnico.pdb

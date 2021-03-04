@@ -1,0 +1,13 @@
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\bin\Debug\GFT.TestTecnicoEntrada.exe.config
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\bin\Debug\GFT.TestTecnicoEntrada.exe
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\bin\Debug\GFT.TestTecnicoEntrada.pdb
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.csprojAssemblyReference.cache
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.Properties.Resources.resources
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.csproj.GenerateResource.cache
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.csproj.CoreCompileInputs.cache
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.exe
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.pdb
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.FormTecnico.resources
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\bin\Debug\Newtonsoft.Json.dll
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\obj\Debug\GFT.TestTecnicoEntrada.csproj.CopyComplete
+D:\Projetos\GFT\.Net Code\GFT.TesteTecnico\GFT.TestTecnicoEntrada\bin\Debug\Newtonsoft.Json.xml
