@@ -28,12 +28,42 @@ BEGIN
 	)
 	PRINT 'Tabela Temp Criada'
 	
-	INSERT INTO #tmpTeste (Trade, Value, ClientSector, Categoria)
-	SELECT row_number() over (order by (select null)) as Trade
-			,REPLACE(REPLACE(SUBSTRING(value,0,CHARINDEX(';', value)), ';', ''), ' ', '') AS [Value]
-			,REPLACE(REPLACE(SUBSTRING(value,CHARINDEX(';', value),LEN(value)), ';', ''), ' ', '') AS [ClientSector]
+	SELECT 
+		row_number() over (order by (select null)) as Id
+		,REPLACE(REPLACE(SUBSTRING(value,0,CHARINDEX(';', value)), ';', ''), ' ', '') AS [Value] INTO #Valor 
+	FROM string_split(@Entrada, '}')
+
+	SELECT 
+		row_number() over (order by (select null)) as Id
+		,REPLACE(REPLACE(SUBSTRING(value,CHARINDEX(';', value),LEN(value)), ';', ''), ' ', '') AS [ClientSector] INTO #ClientSector 
+	FROM string_split(@Entrada, '}')
+	
+	DECLARE @RowNumEnt INT
+	SET @RowNumEnt = 0 
+
+	DECLARE @IdEnt NCHAR(5)
+	SET @IdEnt = (SELECT top 1 Id FROM #Valor)
+
+	DECLARE @LenTempTable INT
+	SET @LenTempTable = (SELECT COUNT(*) - 1 FROM #Valor);
+
+	PRINT 'Inicio While Temp Entrada'
+	WHILE @RowNumEnt < @LenTempTable
+	BEGIN
+		SET @RowNumEnt = @RowNumEnt + 1
+		PRINT '@RowNumEnt =' + cast(@RowNumEnt AS CHAR(1))
+
+		INSERT INTO #tmpTeste (Trade, Value, ClientSector, Categoria)
+		SELECT 
+			@RowNumEnt as Trade
+			,(SELECT REPLACE(REPLACE(SUBSTRING(Value,CHARINDEX('=', Value),LEN(Value)), '=', ''), ' ', '') FROM #Valor WHERE Id = @IdEnt) AS [Value]
+			,(SELECT REPLACE(REPLACE(REPLACE(SUBSTRING(ClientSector,CHARINDEX('=', ClientSector),LEN(ClientSector)), '"', ''), ' ', ''), '=', '') FROM #ClientSector WHERE Id = @IdEnt) AS [ClientSector]
 			,NULL
-	FROM string_split(@Entrada, '|');
+
+		SET @IdEnt = (SELECT TOP 1 Id FROM #Valor WHERE Id > @IdEnt)
+		PRINT '@IdEnt =' + cast(@IdEnt AS VARCHAR(50))
+	END
+	PRINT 'Fim While Temp Entrada'
 
 	PRINT 'Tabela Temp Carregada com Entrada'
 	
@@ -43,11 +73,11 @@ BEGIN
 	DECLARE @TradeId NCHAR(5)
 	SET @TradeId = (SELECT top 1 Trade FROM #tmpTeste)
 
-	DECLARE @LenTempTable INT
-	SET @LenTempTable = (SELECT COUNT(*) FROM #tmpTeste);
+	DECLARE @LenTempTable2 INT
+	SET @LenTempTable2 = (SELECT COUNT(*) FROM #tmpTeste);
 	
-	PRINT 'Inicio While'
-	WHILE @RowNum < @LenTempTable
+	PRINT 'Inicio While Checar Categoria'
+	WHILE @RowNum < @LenTempTable2
 	BEGIN
 		SET @RowNum = @RowNum + 1
 		PRINT '@RowNum =' + cast(@RowNum AS CHAR(1))
@@ -105,7 +135,7 @@ BEGIN
 		PRINT '@TradeId =' + cast(@TradeId AS VARCHAR(50))
 	END
 	
-	PRINT 'Fim While'
+	PRINT 'Fim While Checar Categoria'
 	SET @Portfolio = CONCAT('{',UPPER(@Portfolio),'}')
 	PRINT '@Portfolio =' + cast(@Portfolio AS VARCHAR(Max))
 END
